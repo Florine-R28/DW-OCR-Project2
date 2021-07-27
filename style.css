@@ -1,24 +1,173 @@
-/*section 1*/
- .bloc1
- {
-    text-align : right ;
+/*header*/
+#logo img
+{
+	width: 120px;
+	height: 60px;
 }
 
-.titre
- {
-    
+header 
+{
+	display : flex;
+	align-items: baseline;
+	justify-content: space-between;
 }
+
+.bloc1
+{
+	padding-top : 0px;
+}
+
+/*navigation*/
+nav ul
+{
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav li 
+{
+	margin-right: 15px;
+	padding-top: 0px;
+}
+
+/*style d'ecriture de la page*/
+@font-face {
+	font-family:'Raleway';
+	src: url('Raleway-Thin.tff');
+	font-weight: normal ;
+	font-style: normal;
+}
+
+body
+{
+	font-family:'Raleway',serif, sans-serif;
+}
+
+/*section 1*/
+
+/* écart entre h2 et p à diminuer*/
+h2, p
+{
+
+}
+
+/*rechercher*/
+.bordureresearch
+{
+	width: 400px
+	border-radius: 10px;
+	display: flex ;
+	flex-direction: row;
+}
+
+.research {
+	height: 50px;
+	width: 230px
+	font-size: 18px;
+	color : black;
+	font-weight: blod;
+}
+
+.iconSize {
+	height: 50px;
+	width: 50px;
+}
+
+.backGris
+{
+	background-color: #F2F2F2
+}
+
+
+
+
+
+/*section 2*/
+.hebergements
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.fa-star
+{
+	color: blue;
+}
+
+
+
 
 
 
 /*section 5*/
-.footer 
+.footer
  {
     background-color: #F2F2F2; 
     color: black; 
-    column-count: 3;
-    padding-top : 23px; /*mettre le nombre de pixels*/
+    display: flex;
+    justify-content: space-around;
+    padding : 0px 5px 23px 5px;
+
+ }
+
 }
+
+.footer h3 {
+  margin-top:0;
+  font-size:1.2em;
+}
+
+.footer ul {
+  padding: 0;
+  list-style:none;
+  font-size:1em;
+  line-height: 2em; 
+}
+
+#a_propos
+{
+	width: 15%;
+}
+
+#nos_hebergements
+{
+	width: 15%;
+}
+
+#assistance 
+{
+	width: 45%; 
+}
+
+@media all and (max-width: 1024px)
+{
+    #footer
+    {
+        width: auto
+        flex-direction: column;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px)
+{
+    #footer
+    {
+        width: auto
+        flex-direction: column;
+    }
+}
+
+@media all and (orientation: portrait)
+{
+    #footer
+    {
+        width: auto
+        flex-direction: column;
+    }
+}
+
 
 
 
