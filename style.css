@@ -1,20 +1,36 @@
+/*général*/
+.flexcentre {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flexbetwwen {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.texteGras {
+	font-weight: bold;
+}
+
+.bordureNone {
+	border: none;
+}
+
 /*header*/
 #logo img
 {
 	width: 120px;
-	height: 60px;
+	height: 50px;
 }
 
 header 
 {
 	display : flex;
-	align-items: baseline;
+	align-items: flex-start;
 	justify-content: space-between;
-}
-
-.bloc1
-{
-	padding-top : 0px;
 }
 
 /*navigation*/
@@ -29,16 +45,10 @@ nav li
 {
 	margin-right: 15px;
 	padding-top: 0px;
+	text-decoration: none;
 }
 
 /*style d'ecriture de la page*/
-@font-face {
-	font-family:'Raleway';
-	src: url('Raleway-Thin.tff');
-	font-weight: normal ;
-	font-style: normal;
-}
-
 body
 {
 	font-family:'Raleway',serif, sans-serif;
@@ -46,19 +56,29 @@ body
 
 /*section 1*/
 
-/* écart entre h2 et p à diminuer*/
-h2, p
+/* écart entre h1 et p à diminuer*/
+h1
 {
-
+	margin-bottom: : 0px;
+	padding-bottom: 0px;
 }
 
-/*rechercher*/
-.bordureresearch
+.intro 
 {
-	width: 400px
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+
+/*rechercher*/
+.borduresearch {
+	width: 400px;
 	border-radius: 10px;
-	display: flex ;
-	flex-direction: row;
+	border : 0.5px solid #F2F2F2
+}
+
+.paddingSearch {
+	padding-left: 20px;
 }
 
 .research {
@@ -72,15 +92,96 @@ h2, p
 .iconSize {
 	height: 50px;
 	width: 50px;
+	border-radius: 10px 0 0 10px;
 }
 
-.backGris
-{
+.backGris {
 	background-color: #F2F2F2
 }
 
+.backBlue {
+	background-color: #0065fc;
+}
 
+.buttonSearch {
+	height:50px;
+	width: 120px;
+	color: white;
+	cursor: pointer;
+	border-radius: 0 10px 10px 0;
+}
 
+/*filtres*/
+.filtres{
+	display: flex;
+	align-items: center;
+}
+
+.margfiltres
+{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+.margfiltresTitre
+{ 
+	margin-right: 20px;
+}
+
+.filtreTextIcon
+{
+	border: 2px solid #F2F2F2;
+	height: 50px;
+	border-radius: 30px;
+	margin-right: 20px;
+}
+
+.filtreIcon
+{
+	border-radius: 25px;
+	width: 52px;
+	height: 52px;
+	color : #0065fc;
+	background-color: #deebff;
+}
+
+.filtreText {
+	height:50px;
+	padding-left: 20px; 
+	padding-right: 20px;
+	border-radius: 0px 25px 25px 0px;
+}
+
+.filtreTextIcon:hover > .filtreText {
+	color :#0065ff;
+}
+
+.filtreTextIcon:hover > .filtreIcon {
+	color: white;
+	background-color: #0065fc;
+}
+
+/*ligne d'info*/
+.info {
+	display: flex;
+	align-items: baseline;
+}
+
+.fa-info
+{
+	text-align: center;
+	color: #0065fc;
+	border-radius: 15px;
+	height:30px;
+	width: 30px;
+	border: solid 1px #d9d9d9;
+	padding : 7px;
+	box-sizing : border-box;
+}
+
+.infotext {
+	padding-left: 10px;
+}
 
 
 /*section 2*/
@@ -96,6 +197,87 @@ h2, p
 	color: blue;
 }
 
+.activites img
+{
+	width:;
+	height: ;
+	display: flex;
+	
+}
+
+
+/*activites*/
+
+#Activites{
+	width: 80%;
+}
+
+.container_activites {
+  display: flex;
+  flex-direction: column;
+   flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  height: 496px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.blocactivite {
+	width: 23%;
+}
+
+.photo_activite {
+  background-color: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.photo_activite img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.activite1 img {
+  height: 440px;
+}
+
+.activite2 img {
+  height: 200px;
+}
+
+.activite3 img {
+  height: 110px;
+}
+
+.activite4 img {
+  height: 440px;
+}
+
+.activite5 img {
+  height: 140px;
+}
+
+.activite6 img {
+  height: 140px;
+}
+
+.text_activite {
+  padding: 0 0px 5px 20px;
+  cursor: zoom-in;
+}
+
+.activite2 {
+  margin: 0px 0px 61px 0px;
+}
+
+.activite5 {
+  margin: 0px 0px 92px 0px;
+}
+
+
 
 
 
@@ -108,7 +290,7 @@ h2, p
     color: black; 
     display: flex;
     justify-content: space-around;
-    padding : 0px 5px 23px 5px;
+    padding : 0px 20px 23px 20px;
 
  }
 
@@ -128,33 +310,38 @@ h2, p
 
 #a_propos
 {
-	width: 15%;
+	width: 33%;
 }
 
 #nos_hebergements
 {
-	width: 15%;
+	width: 33%;
 }
 
 #assistance 
 {
-	width: 45%; 
+	width: 33%; 
 }
 
 @media all and (max-width: 1024px)
 {
     #footer
     {
-        width: auto
         flex-direction: column;
     }
+
+    #nos_hebergements
+	{
+		width: 100%;
+	}
+
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px)
 {
     #footer
     {
-        width: auto
+        width: 100%;
         flex-direction: column;
     }
 }
@@ -163,7 +350,7 @@ h2, p
 {
     #footer
     {
-        width: auto
+        width: 100%;
         flex-direction: column;
     }
 }
