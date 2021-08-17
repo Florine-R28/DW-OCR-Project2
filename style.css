@@ -524,10 +524,7 @@ body
 
 
 /* responsive */
-@media screen and (max-width: 1280px) {
-	.sizeLIens12 {
-		margin-left: 35%;
-	}
+@media (min-width: 767px) and (max-width: 2000px) {
 
 	.logements/*cube détail hébergement*/ {
 		min-height: 150px;
@@ -535,7 +532,16 @@ body
 
 	.container_hebergement {
 		min-height: auto ;
-		padding: 20px;
+	}
+
+	.loupe {
+    display: none;
+  	}
+}
+
+@media screen and (max-width: 990px) {
+	.filtres {
+		flex-direction: column;
 	}
 }
 
@@ -583,9 +589,7 @@ body
     right: 30px;
   }
 
-
   nav {
-    display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -610,6 +614,16 @@ body
     padding-bottom: 5px;
   }
 
+  .container_header {
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+
+  .nav_twotabs {
+  	justify-content: space-around;
+  }
+
+
 
   /* PARAMETRES DU DISPLAY BOUTON LOUPE */
 
@@ -624,18 +638,27 @@ body
     right: 52px;
   }
 
-
-  .boutonderecherche {
+  .recherche {
     display: none;
   }
 
+  .buttonSearch {
+    width: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
 
   /* FILTRES */
 
 
   .filtres {
-    display: grid;
-  }
+	flex-direction: column;
+	align-items: flex-start;
+	}
+
+  .margfiltres {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
 
   .margfiltresTitre {
@@ -644,67 +667,68 @@ body
 
 
   .filtreTextIcon {
-    width: 50%;
+    width: 30%;
     margin-bottom: 10px;
   }
 
+  .filtreText {
+  	padding-left: 0px;
+  }
+
+  .mobilefiltres {
+  	flex-direction: row;
+  }
 
 
   /* HEBERGEMENTS ET POPULAIRES */
 
-
-  .corps {
-    display: flex;
-    flex-direction: column;
+  #rentalandmostpop {
+  	display: flex;
+  	flex-direction: column;
   }
 
+   /* PARAMETRES HEBERGEMENTS POPULAIRES */
 
+	.mostpops {
+    width: 100%;
+    order: 1;
+    margin: 0%;
+    padding: 0;
+  }
+
+  .bloclespluspop {
+    padding: 5px;
+    margin: 20px;
+    font-size: 14px;
+  }
+  	
   /* PARAMETRES HEBERGEMENTS */
 
-
-  #logements {
-    width: 100%;
+  .rental {
     background-color: white;
     order: 2;
     width: 100%;
     margin: 0%;
     padding: 0;
+    height: auto;
   }
 
-
   .container_hebergement {
-    display: flex;
     flex-direction: column;
   }
 
 
   .blochebergement {
     width: 95%;
-    height: 210px;
     font-size: 14px;
+    padding: 0%;
   }
 
-
-  .bloclespluspop {
-    width: 95%;
-    padding: 5px;
-    margin: 8px;
-    font-size: 14px;
+  .photo_hebergement {
+  	object-fit: cover;
   }
 
-
-  /* PARAMETRES HEBERGEMENTS POPULAIRES */
-
-
-  #lespluspop {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    order: 1;
-    display: grid;
-  }
-
-
+  
   /* PARAMETRES ACTIVITES */
 
 
@@ -719,6 +743,7 @@ body
 
   .blocactivite {
     width: auto;
+    padding-top: 20px;
   }
 
 
@@ -727,13 +752,13 @@ body
     height: 100px;
   }
 
-
-  .activite {
-    margin-bottom: 30%;
-    height: 70px;
-    -moz-margin-start: 62px;
+  .activite2 {
+  	padding-bottom: 20px;
   }
 
+  .activite5 {
+  	margin-bottom: 20px;
+  }
 
   .text_activite {
     padding: 8px 0px 5px 20px;
@@ -743,12 +768,12 @@ body
     margin-top: -12px;
   }
 
-
   /* FOOTER*/
 
 
-  .container_footer {
-    display: grid;
+  .footer {
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -798,50 +823,4 @@ body
     position: relative;
   }
 
-
-  /* HEBERGEMENTS ET POPULAIRES */
-
-
-  .corps {
-    margin: 25px 0 50px;
-    display: FLEX;
-    flex-direction: column;
-  }
-
-
-  .titresection {
-    text-align: center;
-    padding-bottom: 5px;
-  }
-
-
-  /* PARAMETRES HEBERGEMENTS */
-
-
-  #logements {
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%); /*centré dans l'élément parent*/
-    margin-bottom: 20px;
-    border-radius: 0;
-  }
-
-
-  /* PARAMETRES HEBERGEMENTS POPULAIRES */
-
-
-  #lespluspop {
-    width: 100%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
-  }
-
-
-  footer {
-    border-radius: 0;
-  }
-}
 
