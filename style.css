@@ -23,24 +23,6 @@
 	align-items: center;
 }
 
-.flexColumncentre {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.flexColumnbetwwen {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.flexColumnaround {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
 .texteGras {
 	font-weight: bold;
 }
@@ -158,10 +140,10 @@ body
 
 .research {
 	height: 50px;
-	width: 230px
+	width: 230px;
 	font-size: 18px;
 	color : black;
-	font-weight: blod;
+	font-weight: bold;
 }
 
 .iconSize {
@@ -526,10 +508,6 @@ body
 /* responsive */
 @media (min-width: 767px) and (max-width: 2000px) {
 
-	.logements/*cube détail hébergement*/ {
-		min-height: 150px;
-	}
-
 	.container_hebergement {
 		min-height: auto ;
 	}
@@ -538,6 +516,76 @@ body
     display: none;
   	}
 }
+
+/* RESPONSIVE TABLETTE */
+
+
+@media (min-width: 768px) and (max-width: 1024px) /* TABLETTE */ {
+  /* TEXTE DU HEADER */
+  header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+
+  /* FORMULAIRE DE RECHERCHE */
+
+
+  .logosearch {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    margin-top: -15px;
+  }
+
+
+  /* FILTRES */
+  .filtres {
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .filtreText {
+    font-size: 12px;
+  }
+
+
+  .filtreTextIcon {
+    width: 18%;
+  }
+
+
+  .info {
+    align-items: CENTER;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1250px) {
+
+	.mostpops {
+		display: grid;
+   		height: auto;
+   		background-color: #F2F2F2;
+	}
+
+	.bloclespluspop {	
+ 	  display :flex ;
+ 	  flex-direction: column;
+	}
+
+	.rental {
+		display: grid;
+		height: auto;
+	}
+
+	.photo_hebergement {
+		object-fit: cover;
+	}
+}
+
 
 @media screen and (max-width: 990px) {
 	.filtres {
@@ -775,52 +823,4 @@ body
     display: flex;
     flex-direction: column;
   }
-
-
-
-/* RESPONSIVE TABLETTE */
-
-
-@media (min-width: 768px) and (max-width: 1024px) /* TABLETTE */ {
-  /* TEXTE DU HEADER */
-  header {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-
-  /* FORMULAIRE DE RECHERCHE */
-
-
-  .logosearch {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 5px;
-    margin-top: -15px;
-  }
-
-
-  /* FILTRES */
-  .filtres {
-    align-items: center;
-    width: 100%;
-  }
-
-
-  .filtreText {
-    font-size: 12px;
-  }
-
-
-  .filtreTextIcon {
-    width: 18%;
-  }
-
-
-  .info {
-    align-items: CENTER;
-    position: relative;
-  }
-
-
+}
